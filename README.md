@@ -57,3 +57,8 @@ grub> initrd /boot/initrd.img-4.15.0-66-generic
 
 Se as informações estiverem corretas, neste ponto bastar digitar o comando `boot` que será inicializado.
 
+Após iniciado o sistema, e verificar partições, arquivo de configuração do grub, um item inicial que pode resolver é o `update-grub`, que irá recriar o arquivo de configuração:
+```
+keilon@capsule$ sudo update-grub
+```
+
