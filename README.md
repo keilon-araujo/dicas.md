@@ -2,10 +2,13 @@
 
 Dicas anotadas a partir de problemas reais, alguns irão funcionar, outros não:
 
+# Índice
+1. Recuperando o boot [#1. Recuperando o boot]
 
-# Recuperando Boot
 
-# Recuperando Boot
+
+
+# 1. Recuperando Boot
 
 Ao entrar no Grub Shell algumas poucas op��es s�o oferecidas, pois trata-se de um mini-shell.
 
