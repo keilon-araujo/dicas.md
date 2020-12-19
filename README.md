@@ -3,7 +3,7 @@
 Dicas anotadas a partir de problemas reais, alguns irão funcionar, outros não:
 
 # Índice
-1. Recuperando o boot [#1. Recuperando o boot]
+# 1. Recuperando o boot [#1. Recuperando o boot]
 
 
 
