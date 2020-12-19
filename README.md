@@ -10,12 +10,12 @@ Dicas anotadas a partir de problemas reais, alguns irão funcionar, outros não:
 
 # 1. Recuperando Boot
 
-Ao entrar no Grub Shell algumas poucas op��es s�o oferecidas, pois trata-se de um mini-shell.
+Ao entrar no Grub Shell algumas poucas opões são oferecidas, pois trata-se de um mini-shell.
 
 E porque ele entra no Grub Shell?
 Pode ser que nao tenha sido encontrado o initrd ou o kernel por exemplo.
 
-Para nos situarmos podemos usar o comando `ls` pra verificar as parti�oes...
+Para nos situarmos podemos usar o comando `ls` pra verificar as partições...
 
 ```
 grub> ls
