@@ -62,3 +62,9 @@ Após iniciado o sistema, e verificar partições, arquivo de configuração do 
 keilon@capsule$ sudo update-grub
 ```
 
+É possível que não funcione, outro método é reinstalar o grub:
+```
+grub-install /dev/sda
+
+```
+
