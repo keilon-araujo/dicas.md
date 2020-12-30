@@ -68,3 +68,34 @@ grub-install /dev/sda
 
 ```
 
+# 2. Cliente RDP no Linux
+
+Para acessar clientes RDP temos disponível nos repositórios do debian buster o `xfreerdp`.
+
+```
+keilon@capsule:~$ xfreerdp
+
+FreeRDP - A Free Remote Desktop Protocol Implementation
+See www.freerdp.com for more information
+
+Usage: xfreerdp [file] [options] [/v:<server>[:port]]
+
+Syntax:
+    /flag (enables flag)
+    /option:<value> (specifies option with value)
+    +toggle -toggle (enables or disables toggle, where '/' is a synonym of '+') 
+
+```
+
+Ele é bastante simpes e é executado via CLI, caso as instruções sejam enviadas corretamente, ele irá apresentar a tela da máquina a qual estamos tentando acesso.
+
+Neste exemplo vou tentar acessar a máquina com endereço IP 10.160.88.45 com usuário 92041410.
+
+```
+keilon@capsule:~$ xfreerdp -u 92041410 10.160.88.44
+
+```
+
+Caso tenha um domínio ele será solicitado de modo interatido no terminal.
+
+Vale ressaltar que existem várias outras opções dentro do comando, cabe ver o manul do xfreerdp.
