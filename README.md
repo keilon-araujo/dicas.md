@@ -99,3 +99,50 @@ keilon@capsule:~$ xfreerdp -u 92041410 10.160.88.44
 Caso tenha um domínio ele será solicitado de modo interatido no terminal.
 
 Vale ressaltar que existem várias outras opções dentro do comando, cabe ver o manul do xfreerdp.
+
+
+# Conectando no wifi com wpa_supplicant
+
+* Criar o arquivo `wpa_supplicant.conf`:
+
+$ sudo nano /etc/wpa_supplicant.conf
+
+No arquivo aberto, incluir o nome da rede (`ssid`) e a senha (`psk`) da seguinte forma:
+
+```
+network={
+         ssid="NOME_DA_SUA_REDE"
+         psk="SENHA"
+}
+```
+
+Salvar e sair do `nano`.
+
+* Detectando a interface de rede wifi
+
+Executar o comando `ip a`.
+
+Para efeitos de exemplo, digamos que a interface identificada tenha sido `wlp2s0`.
+
+* Ativando a rede wifi
+
+Executar estes comandos em sequência:
+
+```
+$ sudo ip link set wlp2s0 down
+$ sudo ip link set wlp2s0 up
+$ sudo wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant.conf -Dnl80211,wext
+$ sudo dhclient wlp2s0
+```
+
+Com isso, a conexão wifi já deve estar funcionando.
+
+
+* Se precisar reiniciar antes de ter um ambiante gráfico
+
+Basta executar novamente:
+
+```
+$ sudo wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant.conf -Dnl80211,wext
+$ sudo dhclient wlp2s0
+```
