@@ -101,7 +101,7 @@ Caso tenha um domínio ele será solicitado de modo interatido no terminal.
 Vale ressaltar que existem várias outras opções dentro do comando, cabe ver o manul do xfreerdp.
 
 
-# Conectando no wifi com wpa_supplicant
+# 3. Conectando no wifi com wpa_supplicant
 
 * Criar o arquivo `wpa_supplicant.conf`:
 
