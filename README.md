@@ -4,6 +4,9 @@ Dicas anotadas a partir de problemas reais, alguns irão funcionar, outros não:
 
 # Índice
 # 1. Recuperando o boot [#1. Recuperando o boot]
+# 2. Cliente RDP no Linux [# 2. Cliente RDP no Linux]
+# 3. Conectando no wifi com wpa_supplicant [# 3. Conectando no wifi com wpa_supplicant]
+# 4. Adicionado chave SSH ao git [# 4. Adicionado chave SSH ao git]
 
 
 
@@ -146,3 +149,24 @@ Basta executar novamente:
 $ sudo wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant.conf -Dnl80211,wext
 $ sudo dhclient wlp2s0
 ```
+
+# 4. Adicionado chave SSH ao git
+
+Necessário primeiro criar uma chave SSH na máquina onde será feita a conexão, é necessário o pacote openssh-client:
+
+```
+ssh-keygen -t RSA -C <email>
+```
+
+A partir daí o prompt irá solicitar o local para salvar as chaves, se pressionarmos a tecla enter será salvo em `~/.ssh/id_rsa` por padrão.
+É possível também inserir uma passphrase que será solitada sempre que for necessário usar a chave.
+
+Feito isso, bastar copiar a chave pública que foi salva em `~/.ssh/id_rsa.pub` e copiar chave que será inserida no github em:
+*settings -> SSH and GPG Keys* e inserir no campo *key*, é possível também adicionar uma descrição no campo *title*.
+
+Para finalizar, vamos fazer a comunicação para fazer a troca de chaves:
+```
+SSH -T git@github.com
+```
+
+Caso tudo tenha dado certo, as chaves serão trocadas e inseridas de maneira permanente no Github.
