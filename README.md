@@ -162,7 +162,7 @@ A partir daí o prompt irá solicitar o local para salvar as chaves, se pression
 É possível também inserir uma passphrase que será solitada sempre que for necessário usar a chave.
 
 Feito isso, bastar copiar a chave pública que foi salva em `~/.ssh/id_rsa.pub` e copiar chave que será inserida no github em:
-*settings -> SSH and GPG Keys* e inserir no campo *key*, é possível também adicionar uma descrição no campo *title*.
+_settings -> SSH and GPG Keys_ e inserir no campo _key_, é possível também adicionar uma descrição no campo _title_.
 
 Para finalizar, vamos fazer a comunicação para fazer a troca de chaves:
 ```
