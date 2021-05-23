@@ -2,11 +2,11 @@
 
 Dicas anotadas a partir de problemas reais, alguns irão funcionar, outros não:
 
-# Índice
+## Índice
 ### 1. Recuperando o boot [### 1. Recuperando o boot]
-# 2. Cliente RDP no Linux [2. Cliente RDP no Linux]
-# 3. Conectando no wifi com wpa_supplicant [3. Conectando no wifi com wpa_supplicant]
-# 4. Adicionado chave SSH ao git [4. Adicionado chave SSH ao git]
+### 2. Cliente RDP no Linux [## 2. Cliente RDP no Linux]
+### 3. Conectando no wifi com wpa_supplicant [### 3. Conectando no wifi com wpa_supplicant]
+### 4. Adicionado chave SSH ao git [### 4. Adicionado chave SSH ao git]
 
 
 
