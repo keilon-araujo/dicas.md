@@ -7,6 +7,7 @@ Dicas anotadas a partir de problemas reais, alguns irão funcionar, outros não:
 ### 2. Cliente RDP no Linux 
 ### 3. Conectando no wifi com wpa_supplicant 
 ### 4. Adicionado chave SSH ao git 
+### 5. Ativando/desativando hibernação no systemd
 
 
 
@@ -170,3 +171,27 @@ SSH -T git@github.com
 ```
 
 Caso tudo tenha dado certo, as chaves serão trocadas e inseridas de maneira permanente no Github.
+
+
+# 5. Ativando/desativando hibernação no systemd
+
+
+Se você quiser impedir que seu sistema tente hibernar, use o systemd para desabilitar a função.
+A seguinte linha de comando, deve resolver o assunto:
+```sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target```
+
+Se quiser desfazer o procedimento, realize o seguinte comando:
+```sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target```
+
+Para desabilitar a suspensão quando a tampa do notebook for fechada, ajuste os seguintes parâmetros no arquivo de configuração /etc/systemd/logind.conf:
+[Login]
+HandleLidSwitch=ignore
+HandleLidSwitchDocked=ignore
+
+    Obs.: no meu caso eu também adicionei as linhas:
+    HandlePowerKey=ignore
+    HandleSuspendKey=ignore
+    HandleHibernateKey=ignore
+
+Em seguida rode o comando systemctl, da seguinte forma:
+systemctl restart systemd-logind.service
